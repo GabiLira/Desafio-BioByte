@@ -1,0 +1,16 @@
+{
+    "codigo_identificacao": "A123456789",
+    "tipo_autuacao": "Estacionamento Irregular",
+    "observacao": "Veículo estacionado em local proibido",
+    "data_hora_emissao": "2024-02-06T15:30:00",
+    "endereco_ocorrencia": {
+      "municipio": "Cidade das Palmeiras",
+      "logradouro": "Rua Esmeralda",
+      "numeracao": "134"
+    },
+    "dados_veiculo_autuado": {
+      "marca": "Tomaha",
+      "modelo": "Hb30",
+      "placa": "AWB1768"
+    }
+  }

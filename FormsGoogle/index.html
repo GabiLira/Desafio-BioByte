@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!-- Configurações básicas do documento -->
+  <meta charset="UTF-8">
+  <title>Desafio Biobyte Google &amp; CSS</title>
+  <!-- Importa o arquivo CSS externo -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- Configuração da viewport para dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importação de fontes do Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Material Icons' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Estrutura principal do conteúdo -->
+  <div class="main">
+    <!-- Formulário para criar uma conta do Google -->
+    <form class="" action="/conta/cadastrar" method="POST">
+      <!-- Cabeçalho do formulário -->
+      <div class="head">
+        <!-- Logo do Google -->
+        <img src="images/logo.svg" alt="" class="logo">
+        <!-- Título do formulário -->
+        <h3>Criar sua conta do Google</h3>
+      </div>
+      <!-- Campos para inserir o nome e sobrenome -->
+      <div class="nome">
+        <input type="nome" required>
+        <label>Nome</label>
+      </div>
+      <div class="nome">
+        <input type="nome" required>
+        <label>Sobrenome</label>
+      </div>
+      <!-- Campo para inserir o nome de usuário -->
+      <div class="usuario">
+        <input type="usuario" required>
+        <label>Nome de usuário</label>
+        <!-- Indicação de que o usuário será seguido por "@gmail.com" -->
+        <span class="gmail">@gmail.com</span>
+      </div>
+      <!-- Links de orientação -->
+      <a class="line1">Você pode usar letras, números e pontos finais</a>
+      <a href="" class="line2">Usar meu endereço de email atual em vez disso</a>
+      <!-- Campos para inserir a senha e confirmar a senha -->
+      <div class="pass">
+        <input type="password" class="password" id="pass1" required>
+        <label>Senha</label>
+      </div>
+      <div class="pass">
+        <input type="password" class="password" id="pass2" required>
+        <label>Confirmar</label>
+      </div>
+      <!-- Ícone para mostrar/ocultar a senha -->
+      <div class="iconeye">
+        <img src="images/eyehide.png" onclick="show();" id="eye">
+      </div>
+      <!-- Links de orientação sobre a senha -->
+      <a class="line3">Use oito ou mais caracteres em uma combinação de letras, números e símbolos</a>
+      <a href="" class="line4">Faça login em vez disso</a>
+      <!-- Botão de envio do formulário -->
+      <input type="submit" value="Próxima">
+    </form>
+    <!-- Imagem lateral -->
+    <div class="side-image">
+      <img src="images/image1.svg" alt="" class="side-logo">
+    </div>
+    <!-- Texto lateral -->
+    <div class="side-text">
+      <!-- Título promocional -->
+      <h3>Uma única conta. Todo o Google 
+        trabalhando para você.</h3>
+    </div>
+  </div>
+  <!-- Importa o arquivo JavaScript externo -->
+  <script src="./script.js"></script>
+</body>
+
+</html>

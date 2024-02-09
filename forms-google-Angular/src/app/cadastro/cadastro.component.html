@@ -1,0 +1,48 @@
+<div class="main" *ngIf="cadastroForm">
+  <form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+    <div class="head">
+      <img src="images/logo.svg" alt="" class="logo">
+      <h3>Criar sua conta do Google</h3>
+    </div>
+    <div class="nome">
+      <input type="text" formControlName="nome">
+      <label>Nome</label>
+      <div *ngIf="cadastroForm.get('nome')?.invalid && cadastroForm.get('nome')?.touched" class="error-message">
+        {{ getErrorMessage('nome') }}
+      </div>
+    </div>
+    <div class="nome">
+      <input type="text" formControlName="sobrenome">
+      <label>Sobrenome</label>
+      <div *ngIf="cadastroForm.get('sobrenome')?.invalid && cadastroForm.get('sobrenome')?.touched" class="error-message">
+        {{ getErrorMessage('sobrenome') }}
+      </div>
+    </div>
+    <div class="pass">
+      <input type="{{ senhaVisivel ? 'text' : 'password' }}" formControlName="senha">
+      <label>Senha</label>
+      <div *ngIf="cadastroForm.get('senha')?.invalid && cadastroForm.get('senha')?.touched" class="error-message">
+        {{ getErrorMessage('senha') }}
+      </div>
+    </div>
+    <div class="pass">
+      <input type="{{ senhaVisivel ? 'text' : 'password' }}" formControlName="confirmarSenha">
+      <label>Confirmar</label>
+      <div *ngIf="cadastroForm.get('confirmarSenha')?.invalid && cadastroForm.get('confirmarSenha')?.touched" class="error-message">
+        {{ getErrorMessage('confirmarSenha') }}
+      </div>
+    </div>
+    <div class="iconeye">
+      <img src="images/eyehide.png" (click)="togglePasswordVisibility()" id="eye">
+    </div>
+    <a class="line3">Use oito ou mais caracteres em uma combinação de letras, números e símbolos</a>
+    <a href="" class="line4">Faça login em vez disso</a>
+    <button type="submit" [disabled]="cadastroForm.invalid">Próxima</button>
+  </form>
+  <div class="side-image">
+    <img src="images/image1.svg" alt="" class="side-logo">
+  </div>
+  <div class="side-text">
+    <h3>Uma única conta. Todo o Google trabalhando para você.</h3>
+  </div>
+</div>

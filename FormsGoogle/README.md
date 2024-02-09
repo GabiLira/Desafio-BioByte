@@ -1,6 +1,6 @@
 # Projeto de Desafio: Cadastro de Conta
 
-Este projeto foi desenvolvido em resposta às Questões 2 a 4 de um desafio, que envolvem a criação de uma tela de cadastro de conta semelhante à do Google, a validação dos campos digitados pelo usuário em JavaScript e a implementação de um backend REST em Node.js.
+Este projeto foi desenvolvido em resposta às Questões 2 a 4 do desafio, que envolvem a criação de uma tela de cadastro de conta semelhante à do Google, a validação dos campos digitados pelo usuário em JavaScript e a implementação de um backend REST em Node.js.
 
 ## Passos Seguidos no Desenvolvimento
 

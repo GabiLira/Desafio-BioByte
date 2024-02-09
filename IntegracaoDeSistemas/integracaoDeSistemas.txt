@@ -1,0 +1,24 @@
+Teste de integração de sistemas: 
+Questão 8 
+Considere um sistema de análise de cirurgias de pacientes de um hospital em que os dados do paciente e de suas cirurgias são cadastrados por digitação. Basicamente, um usuário digitador recebe um conjunto de folhas impressas contendo as informações do paciente e das cirurgias e, então, realiza o cadastro no sistema. A fim de eliminar o processo de cadastro manual, demandou-se a criação de uma solução de integração entre o sistema de análise de cirurgias e o sistema de gestão hospitalar. O sistema de gestão hospitalar armazena todos os dados no âmbito hospitalar dos pacientes, incluindo as cirurgias. 
+Em colaboração, a equipe de TI do hospital concedeu acesso de leitura ao banco de dados do sistema de gestão hospitalar, exclusivamente, a partir de uma máquina do hospital, que pode ser acessada por SSH. O sistema de análise de cirurgias encontra-se fora da rede do hospital, mais especificamente, disponibilizado em nuvem. O banco de dados do sistema de análise não possui acesso externo, isto é, só pode ser acessado pelo próprio sistema. A equipe de TI do sistema de análise possui certa flexibilidade para implantações que forem solicitadas, desde que viáveis. 
+Faça o projeto de uma solução de integração para resolver o problema apresentado de forma a garantir que os dados de paciente e cirurgias possam ser enviados ao sistema de análise de forma segura, em completude e sem redundância. Descreva em detalhes toda sua solução levando em consideração possíveis adversidades que possam estar envolvidas na integração. Não há necessidade de apresentar codificação. 
+
+
+Minha solução:
+Para resolver esse problema e garantir uma integração segura, completa e sem redundância entre o sistema de análise de cirurgias na nuvem e o sistema de gestão hospitalar, eu sugeriria seguir os seguintes passos:
+1- Estabelecer um canal seguro de comunicação: Como o acesso ao banco de dados do sistema de gestão hospitalar é feito via SSH a partir de uma máquina interna do hospital, podemos utilizar túneis SSH para estabelecer uma conexão segura entre a máquina do hospital e o sistema de análise na nuvem. Isso pode ser feito utilizando ferramentas como SSH tunneling ou VPNs.
+
+2- Desenvolver um script de exportação de dados: Na máquina do hospital, podemos desenvolver um script que se conecte ao banco de dados do sistema de gestão hospitalar via SSH e exporte os dados relevantes (informações do paciente e suas cirurgias) para um formato compatível com o sistema de análise de cirurgias na nuvem. Esse script pode ser executado periodicamente para garantir que os dados estejam sempre atualizados.
+
+3- Implantar um endpoint seguro no sistema de análise: No sistema de análise de cirurgias na nuvem, podemos implantar um endpoint seguro (por exemplo, uma API REST protegida por autenticação) que receberá os dados exportados pelo script da máquina do hospital. Esse endpoint deve ser capaz de receber os dados no formato especificado e processá-los adequadamente para armazenamento no banco de dados do sistema de análise.
+
+4- Implementar mecanismos de controle de duplicidade: Para evitar redundância de dados, podemos implementar mecanismos no sistema de análise de cirurgias que verifiquem se os dados recebidos já existem no banco de dados. Isso pode ser feito comparando chaves únicas dos registros, como IDs de pacientes ou IDs de cirurgias, e ignorando os dados que já estão presentes no sistema.
+
+5- Monitoramento e tratamento de erros: É importante implementar um sistema de monitoramento que verifique regularmente o funcionamento da integração. Caso ocorram erros durante a exportação ou importação de dados, devem ser implementados mecanismos para tratá-los de forma adequada, como registro de logs e notificações para a equipe de TI.
+
+6- Garantir conformidade com regulamentações de privacidade: Como os dados de pacientes são sensíveis, é fundamental garantir que a integração esteja em conformidade com regulamentações de privacidade, como o GDPR (General Data Protection Regulation) na União Europeia ou a HIPAA (Health Insurance Portability and Accountability Act) nos Estados Unidos. Isso envolve garantir a segurança dos dados em trânsito e em repouso, bem como implementar controles de acesso adequados.
+
+7- Realizar testes de segurança e integridade dos dados: Antes de colocar a solução em produção, é essencial realizar testes de segurança para identificar e corrigir eventuais vulnerabilidades. Além disso, devem ser realizados testes de integridade dos dados para garantir que os dados estejam sendo transferidos e armazenados corretamente, sem perdas ou corrupções.
+
+Com esses passos, acredito que podemos criar uma solução de integração robusta e segura que permitirá o envio de dados de pacientes e cirurgias do sistema de gestão hospitalar para o sistema de análise de cirurgias na nuvem de forma eficiente e confiável.

@@ -1,6 +1,6 @@
 
 # Projeto de Desafio: Envio de Dados de Auto de Infração para Backend REST
-Este projeto tem como objetivo responder à Questão 1 de um desafio, que envolve o envio de dados de um auto de infração para um backend REST no formato JSON. O auto de infração contém as seguintes informações:
+Este projeto tem como objetivo responder à Questão 1 do desafio, que envolve o envio de dados de um auto de infração para um backend REST no formato JSON. O auto de infração contém as seguintes informações:
 
 **Código de Identificação:** Um código único para identificar o auto de infração.
 

@@ -1,0 +1,118 @@
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fff;
+  }
+  
+  form {
+    border: 1px solid #9c9c9c;
+    border-radius: 10px;
+    width: 750px;
+    padding: 25px;
+    background: #fff;
+  }
+  
+  .logo {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .head h3 {
+    font-size: 23px;
+    font-family: jost;
+    margin: 15px 0;
+  }
+  
+  input {
+    outline: none;
+    border: 1px solid #9c9c9c;
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 35px;
+    font-size: 15px;
+  }
+  
+  input:focus {
+    border: 1.5px solid #1f52f9;
+  }
+  
+  .nome,
+  .usuario {
+    margin-top: 20px;
+  }
+  
+  .usuario {
+    position: relative;
+  }
+  
+  .gmail {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-family: roboto;
+    color: #333;
+    font-size: 15px;
+    cursor: default;
+  }
+  
+  .line1,
+  .line2,
+  .line3,
+  .line4 {
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  
+  .line2,
+  .line4 {
+    color: #1A73E8;
+  }
+  
+  .iconeye {
+    position: absolute;
+    top: 165px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .side-image,
+  .side-text {
+    position: absolute;
+  }
+  
+  .side-image {
+    top: 0;
+    left: 0;
+  }
+  
+  .side-text {
+    top: 50%;
+    left: 60%;
+    transform: translateY(-50%);
+  }
+  
+  .side-logo {
+    width: 230px;
+  }
+  
+  .prevention-message {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffcccc;
+    color: #990000;
+    border: 1px solid #ff6666;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: roboto;
+    font-size: 14px;
+    width: 90%;
+    max-width: 750px;
+    box-sizing: border-box;
+    z-index: 999;
+  }
